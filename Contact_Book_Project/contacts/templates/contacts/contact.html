@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    {% load static %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/contact.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="gradient-background">
+        <div class="container">
+            <h2 class="welcome-message">Welcome, {{ name }}</h2>
+            <div class="row">
+                <!-- Left Box -->
+                <div class="col-md-6">
+                    <div class="box left-box">
+                        <h3>Add/Update Contact</h3>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" name="phone" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea name="address" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" name="action" value="add_update">Add/Update</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Right Box -->
+                <div class="col-md-6">
+                    <div class="box right-box">
+                        <h3>Contacts</h3>
+                        <ul class="list-group">
+                            {% for contact in contacts %}
+                                <li class="list-group-item">
+                                    <strong>{{ contact.name }}</strong><br>
+                                    {{ contact.phone }}<br>
+                                    {{ contact.email }}<br>
+                                    {{ contact.address }}<br>
+                                    <a href="{% url 'display' contact.email %}" class="btn btn-info btn-sm">View</a>
+                                    <form method="post" style="display:inline;">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="email" value="{{ contact.email }}">
+                                        <button type="submit" class="btn btn-danger btn-sm" name="action" value="delete">Delete</button>
+                                    </form>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

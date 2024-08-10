@@ -1,0 +1,58 @@
+/* Gradient background for the Contact page */
+.gradient-background {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Adjust colors as needed */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Centered welcome message */
+.welcome-message {
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+/* Styling for the boxes */
+.box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.left-box {
+    margin-right: 1rem;
+}
+
+.right-box {
+    margin-left: 1rem;
+    text-align: left; /* Align text to the left */
+}
+
+/* Centered heading in the right box */
+.right-box h3 {
+    text-align: center;
+}
+
+/* Styling for contact list items */
+.list-group-item {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.list-group-item a {
+    margin-right: 0.5rem;
+}
+
+.btn-info {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-info:hover {
+    background-color: #0056b3;
+}

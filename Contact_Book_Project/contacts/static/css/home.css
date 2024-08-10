@@ -1,0 +1,48 @@
+/* Gradient background for the entire page */
+.gradient-background {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Styling the login box */
+.login-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-box h1 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.login-box p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.login-box .form-control {
+    border-radius: 4px;
+    box-shadow: none;
+    margin-bottom: 1rem;
+}
+
+.login-box .btn-primary {
+    background-color: #ff7e5f;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.login-box .btn-primary:hover {
+    background-color: #feb47b;
+}
