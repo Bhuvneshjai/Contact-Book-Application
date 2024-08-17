@@ -61,13 +61,12 @@ The application uses SQLite as the database and includes functionalities for add
 3. Contact Page:
   * Fill out the form to add or update contact details.
   * Contacts will appear in the right box with options to update or delete.
-  * Use the pagination controls to navigate through multiple contacts.
-  * Click "View All" to see all contacts on the Display Page.
+  * Click "View" to see all contacts on the Display Page.
     
     * Image:
         ![image](https://github.com/user-attachments/assets/d7bc2801-4dd5-4559-b665-bf08102a9619)
 
-3. Display Page: View all your contacts and use the "Back to Contact Page" button to return.
+3. Display Page: View your contact.
     * Image:
         ![image](https://github.com/user-attachments/assets/cdb3aadd-74ef-4ddd-bd80-0e21e6663c59)
 
