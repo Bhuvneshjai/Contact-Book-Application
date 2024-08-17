@@ -14,12 +14,10 @@ The application uses SQLite as the database and includes functionalities for add
   - Users can add or update contact details (Name, Phone, Email, Address).
   - Contact details are displayed.
   - Users can update or delete contact details.
-  - A "View All" button directs users to the Display Page.
-  - A "Logout" button directs users to the Home Page.
+  - A "View" button directs user to the Display Page.
 
 - **Display Page**:
-  - Displays all contacts related to the logged-in user.
-  - A "Back to Contact Page" button allows users to return to the Contact Page.
+  - Displays contacts related to the logged-in user.
   - A "Logout" button redirects users to the Home Page.
 
 ## Technologies Used
